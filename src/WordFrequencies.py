@@ -20,6 +20,7 @@ def calculate_word_frequencies(file_path):
 
     return total_words, top_20_words
 
+# Test the function:
 file_path = "text_file.txt"
 total_words, top_20_words = calculate_word_frequencies(file_path)
 
