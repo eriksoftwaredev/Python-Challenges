@@ -1,5 +1,4 @@
 import csv
-import os
 
 def merge_csv_files(csv_files):
     merged_data = []
@@ -21,7 +20,7 @@ def merge_csv_files(csv_files):
 
     return merged_file_path
 
-# Example usage:
+# Test the function:
 csv_files = ['class1.csv', 'class2.csv']
 merged_file_path = merge_csv_files(csv_files)
 print(f"Merged file saved at: {merged_file_path}")
