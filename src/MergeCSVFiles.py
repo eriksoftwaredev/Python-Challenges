@@ -1,6 +1,6 @@
 import csv
 
-def merge_csv_files(csv_files):
+def merge_csv_files(csv_files, merged_file_path):
     merged_data = []
     headers = set()
 
@@ -12,15 +12,13 @@ def merge_csv_files(csv_files):
             for row in csv_reader:
                 merged_data.append(row)
 
-    merged_file_path = 'merged_file.csv'
     with open(merged_file_path, 'w', newline='') as merged_file:
         writer = csv.DictWriter(merged_file, fieldnames=headers)
         writer.writeheader()
         writer.writerows(merged_data)
 
-    return merged_file_path
-
 # Test the function:
-csv_files = ['class1.csv', 'class2.csv']
-merged_file_path = merge_csv_files(csv_files)
+csv_files = ['.\\assets\\class1.csv', '.\\assets\\class2.csv']
+merged_file_path = '.\\assets\\merged_file.csv'
+merge_csv_files(csv_files, merged_file_path)
 print(f"Merged file saved at: {merged_file_path}")
