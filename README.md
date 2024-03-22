@@ -1,0 +1,1 @@
+Welcome to Python-Challenges, a collection of 15 diverse programming challenges. Each challenge presents a unique problem or task, providing an opportunity to practice and improve Python programming abilities.
